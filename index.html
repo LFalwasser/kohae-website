@@ -914,6 +914,22 @@ a[href^="mailto:"]{overflow-wrap:anywhere;word-break:normal}
  .hero .nav,.hero nav{right:16px!important;max-width:calc(100vw - 32px)!important}
 }
 
+
+/* V74 FINAL: mobile Kōrero safe-area positioning only */
+@media (max-width: 780px) {
+  .hero .nav {
+    width: 100% !important;
+    max-width: none !important;
+    padding-left: max(20px, env(safe-area-inset-left)) !important;
+    padding-right: max(20px, env(safe-area-inset-right)) !important;
+  }
+  .hero .nav a:last-child {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    margin-right: 0 !important;
+  }
+}
+
 </style>
 
 
